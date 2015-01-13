@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>can.Pagination</title>
+		
+		<!-- Bootstrap -->
+		<link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+		
+	</head>
+	<body>
+		<div class="container">
+			<div class="page-header">
+					<h1>can.Pagination</h1>
+				</div>
+				<p>CanJS Pagination Plugin</p>
+				<div id="paginationDemo">
+					<ul class="list-group" id="listToPaginate">
+						<li class="list-group-item">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+						</li>
+						<li class="list-group-item">
+							Sed commodo magna sit amet augue ornare, pulvinar pharetra felis finibus.
+						</li>
+						<li class="list-group-item">
+							Pellentesque vel purus ac ipsum sagittis pulvinar eu ut sem.
+						</li>
+						<li class="list-group-item">
+							Sed tincidunt nisi vel massa blandit dignissim.
+						</li>
+						<li class="list-group-item">
+							Aenean ac augue ac sem varius finibus quis id massa.
+						</li>
+						<li class="list-group-item">
+							Vivamus convallis tellus vitae elementum accumsan.
+						</li>
+						<li class="list-group-item">
+							Maecenas vulputate neque vel ligula porta, vel vestibulum purus auctor.
+						</li>
+						<li class="list-group-item">
+							Pellentesque viverra lacus ut scelerisque consectetur.
+						</li>
+						<li class="list-group-item">
+							Ut eget nibh mattis, fringilla sapien id, gravida velit.
+						</li>
+						<li class="list-group-item">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+						</li>
+						<li class="list-group-item">
+							Sed commodo magna sit amet augue ornare, pulvinar pharetra felis finibus.
+						</li>
+						<li class="list-group-item">
+							Pellentesque vel purus ac ipsum sagittis pulvinar eu ut sem.
+						</li>
+						<li class="list-group-item">
+							Sed tincidunt nisi vel massa blandit dignissim.
+						</li>
+						<li class="list-group-item">
+							Donec nec orci sit amet mi mattis luctus et quis dui.						
+						</li>
+						<li class="list-group-item">
+							Vestibulum et ipsum in mauris pellentesque commodo nec vel urna.						
+						</li>
+						<li class="list-group-item">
+							Quisque lacinia leo sit amet massa aliquet, quis mattis lorem viverra.						
+						</li>
+						<li class="list-group-item">
+							Duis laoreet neque nec ligula consequat, ut commodo lorem rutrum.						
+						</li>
+						<li class="list-group-item">
+							Quisque commodo leo ut turpis commodo, at feugiat justo aliquam.						
+						</li>
+						<li class="list-group-item">
+							Vestibulum convallis mauris et aliquet facilisis.
+						</li>
+						<li class="list-group-item">
+							Aenean ac augue ac sem varius finibus quis id massa.
+						</li>
+						<li class="list-group-item">
+							Donec nec orci sit amet mi mattis luctus et quis dui.						
+						</li>
+						<li class="list-group-item">
+							Vestibulum et ipsum in mauris pellentesque commodo nec vel urna.						
+						</li>
+						<li class="list-group-item">
+							Quisque lacinia leo sit amet massa aliquet, quis mattis lorem viverra.						
+						</li>
+						<li class="list-group-item">
+							Duis laoreet neque nec ligula consequat, ut commodo lorem rutrum.						
+						</li>
+						<li class="list-group-item">
+							Quisque commodo leo ut turpis commodo, at feugiat justo aliquam.						
+						</li>
+						<li class="list-group-item">
+							Vestibulum convallis mauris et aliquet facilisis.
+						</li>
+						<li class="list-group-item">
+							Vivamus convallis tellus vitae elementum accumsan.
+						</li>
+						<li class="list-group-item">
+							Maecenas vulputate neque vel ligula porta, vel vestibulum purus auctor.
+						</li>
+						<li class="list-group-item">
+							Pellentesque viverra lacus ut scelerisque consectetur.
+						</li>
+						<li class="list-group-item">
+							Ut eget nibh mattis, fringilla sapien id, gravida velit.
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script id="bootstrapView" type="text/mustache">
+		<nav class="center-block">
+			<ul class="pagination">
+			{{#if page}}
+				<li>
+					<a class="link jump-first">
+						<<
+					</a>
+				</li>
+				<li>
+					<a class="link jump-previous">
+						<
+					</a>
+				</li>
+				{{#each page}}
+				<li>
+					<a jump-key="{{pageNumber}}" class="link jump-to">
+						{{pageNumber}}
+					</a>
+				</li>
+				{{/each}}
+				<li>
+					<a class="link jump-next">
+						>
+					</a>
+				</li>
+				<li >
+					<a class="link jump-last">
+						>>
+					</a>
+				</li>
+			{{/if}}
+			</ul>	
+			<form class="pagination form-inline" role="form" onsubmit="return false;">
+				<div class="form-group">
+					<label for="page">Ir a</label>
+					<input type="text" class="form-control" name="page" placeholder="1">
+				</div>
+				<div class="form-group">
+					<label for="limit">Articulos por Página</label>
+					<select class="form-control" name="limit">
+						<option>5</option>
+						<option>10</option>
+						<option>15</option>
+					</select>
+				</div>
+			</form>
+		</nav>
+	</script>
+	<script src='../bower_components/steal/steal.js' data-config="../stealconfig" data-main='demo/main'></script>
+</html>

@@ -1,0 +1,18 @@
+{
+	"name": "can.pagination",
+	"version": "0.0.1",
+	"repository": {
+		"type": "git",
+		"url": "git@github.com:nguidi/can.pagination.git",
+		"github": "https://github.com/nguidi/can.pagination"
+	},
+	"licenses": [
+		{
+			"type": "MIT",
+			"url": "http://opensource.org/licenses/mit-license.php"
+		}
+	],
+	"devDependencies": {
+		"steal-tools": "^0.5.0"
+	}
+}
