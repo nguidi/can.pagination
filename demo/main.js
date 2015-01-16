@@ -26,7 +26,7 @@ steal(
 
 		can.$('body')
 			.on(
-				'change.can.pagination'
+				'pagechange.can.pagination'
 			,	function(ev,change)
 				{
 					toggleLi(change.page,change.limit)

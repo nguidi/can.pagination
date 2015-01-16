@@ -145,7 +145,7 @@ steal(
 					this
 						.element
 							.trigger(
-								'change.can.pagination'
+								'pagechange.can.pagination'
 							,	{
 									page:	pageNumber
 								,	limit:	this.options.limit
